@@ -1,0 +1,23 @@
+/* 
+* Name : Naman Vikram Singh
+* Roll : 590042641
+* Day : 15 Question: 2
+* Date : 9-09-2026
+*
+* PROBLEM STATEMENT:
+* <Write a program to reverse a given number.>
+*/
+#include<stdio.h>
+int main() {
+int n, reversed = 0, remainder;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    while (n != 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+    printf("Reversed number: %d", reversed);
+    return 0;
+}
+    
