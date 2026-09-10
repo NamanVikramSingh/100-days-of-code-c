@@ -1,0 +1,39 @@
+/*
+* Name : Naman Vikram Singh
+* Roll : 590042641
+* Day : 22 Question: 1
+* Date : 10-09-2026
+*
+* PROBLEM STATEMENT:
+* <Write a program to check if a number is a strong number.>
+*/
+#include <stdio.h>
+int main() {
+    int n, temp, digit, i, fact, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    temp = n;
+
+    while(temp > 0)
+    {
+        digit = temp % 10;
+
+        fact = 1;
+        for(i = 1; i <= digit; i++)
+        {
+            fact = fact * i;
+        }
+
+        sum = sum + fact;
+        temp = temp / 10;
+    }
+
+    if(sum == n)
+        printf("%d is a strong number", n);
+    else
+        printf("%d is not a strong number", n);
+
+    return 0;
+}
